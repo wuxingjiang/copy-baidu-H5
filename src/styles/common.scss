@@ -1,0 +1,20 @@
+body,ul,li,p,h1,h2,h3,h4,h5{
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+a:hover {
+  text-decoration:none;
+};
+a:active {
+  text-decoration:none;
+}
+a:visited {
+  text-decoration:none;
+}
+a:link {
+  text-decoration:none;
+}

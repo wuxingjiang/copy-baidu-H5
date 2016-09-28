@@ -1,0 +1,108 @@
+@import "common";
+
+.index-header {
+  background-color: rgba(24,97,198,1);
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  position: relative;
+}
+
+$media: screen;
+$feature: max-width;
+$value: 768px;
+
+@media #{$media} and ($feature: $value) {
+  .index-header {
+    background-color: rgba(24,97,198,.8);
+  }
+}
+
+.logo {
+  padding-left: 20px;
+}
+
+@media screen {
+  .header-nav {
+
+    a {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      // display: none;
+      position: absolute;
+      width: 100%;
+      top: 60px;
+      left: 0;
+      background-color: #1652a5;
+      box-sizing: border-box;
+
+      li {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        height: 45px;
+        line-height: 45px;
+      }
+      li:hover {
+        background-color: rgba(24,97,198,.8);
+      }
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      li {
+        padding: 0 20px;
+        -webkit-align-self: center;
+        align-self: center;
+
+        a {
+          border:1px solid rgba(255,255,255,0);
+          padding: 6px 8px;
+          border-radius: 4px;
+        }
+
+        a:hover {
+          border:1px solid rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    @media (max-width: 768px) {
+      margin-right: 20px;
+      // padding: 10px;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid transparent;
+      display: flex;
+      -webkit-flex-direction:column;
+      flex-direction:column;
+      -webkit-justify-content:center;
+      justify-content:center;
+      border-radius: 4px;
+      cursor: pointer;
+      .icon-bar {
+        width: 22px;
+        height: 3px;
+        border-radius: 2px;
+        margin-bottom: 4px;
+        background-color: #fff;
+      }
+    }
+      @media (min-width: 768px) {
+        display: none;
+      }
+  }
+
+  .navbar-toggle:hover {
+    background-color: #fff;
+    .icon-bar {
+      background-color: rgba(24,97,198,1);
+    }
+  }
+}
